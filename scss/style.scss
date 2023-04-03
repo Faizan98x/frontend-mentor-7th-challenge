@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+$paleBlue: hsl(225, 100%, 94%);
+$brightBlue: hsl(245, 75%, 52%);
+
+$veryPaleBlue: hsl(225, 100%, 98%);
+$desaturatedBlue: hsl(224, 23%, 55%);
+$darkBlue: hsl(223, 47%, 23%);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: url(../images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  background-position: top;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $paleBlue;
+}
+
+%btn {
+  padding: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 0.8rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+// card section starts
+
+.card {
+  height: 460px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: #fff;
+
+  //   section # 1
+
+  .illustration__img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+
+  //   section # 2
+
+  .textArea {
+    text-align: center;
+    margin-top: 3rem;
+
+    .title {
+      color: $darkBlue;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      font-weight: 900;
+    }
+
+    .description {
+      font-size: 1.2rem;
+      color: $desaturatedBlue;
+      line-height: 1.6;
+      font-weight: 500;
+      padding: 0 4rem;
+    }
+  }
+
+  //   section # 3
+
+  .priceLog {
+    margin: 1rem 2rem;
+    padding: 1rem;
+    background-color: $veryPaleBlue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 1rem;
+
+    .logoPrice {
+      display: flex;
+      align-items: center;
+
+      .musicIcon {
+        width: 30%;
+      }
+
+      .price {
+        margin-left: 1rem;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: $desaturatedBlue;
+
+        .priceBold {
+          font-size: 1.3rem;
+          font-weight: 900;
+          color: $darkBlue;
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+
+    .changePlan {
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: $brightBlue;
+      transition: 0.2s ease-in-out;
+
+      &:hover {
+        color: lighten($color: $brightBlue, $amount: 10%);
+      }
+    }
+  }
+
+  //   buttons section
+
+  .btns {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2.5rem;
+  }
+
+  .primary-btn {
+    background-color: $brightBlue;
+    @extend %btn;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    &:hover {
+      background-color: lighten($color: $brightBlue, $amount: 10%);
+    }
+  }
+
+  .secondary-btn {
+    background-color: $veryPaleBlue;
+    @extend %btn;
+    color: $desaturatedBlue;
+
+    
+    &:hover {
+        color: $darkBlue;
+      }
+  }
+}
