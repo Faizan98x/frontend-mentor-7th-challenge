@@ -153,9 +153,23 @@ body {
     @extend %btn;
     color: $desaturatedBlue;
 
-    
     &:hover {
-        color: $darkBlue;
-      }
+      color: $darkBlue;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    background: url(../images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    background-position: top;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $paleBlue;
   }
 }
